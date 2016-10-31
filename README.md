@@ -13,4 +13,4 @@ chmod +x adb-service
 ```
 
 # important
-This script file has been developed on macOSX and not sure about compatiblity on linux. test and contribution would be appreatiated
+This script file has been developed on macOSX and not sure about compatibility on linux. test and contribution would be appreciated

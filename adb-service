@@ -1,0 +1,51 @@
+#!/bin/sh
+
+function log {
+    STATUS=$1
+    MSG=$2
+
+    if [ ! -t 0 ]; then
+        INPUT=$(cat)
+    else
+        INPUT=""
+    fi
+
+    case "$STATUS" in
+        warning) COLOR_CODE='93'; ;;
+        success) COLOR_CODE='92'; ;;
+        error)   COLOR_CODE='91'; ;;
+        info)    COLOR_CODE='94'; ;;
+        *)       COLOR_CODE='39'; MSG=$1 ;;
+    esac
+
+    RESET="\e[0m";
+    COLOR="\e[0;${COLOR_CODE}m";
+
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        RESET="\x1B[0m";
+        COLOR="\x1B[0;${COLOR_CODE}m";
+    fi
+
+    echo ${COLOR}${MSG}${INPUT}${RESET}
+}
+
+function adb_shell () {
+    echo $(adb shell 'echo 1' 2> /dev/null);
+}
+
+function adb_watch () {
+    while [ $(adb_shell) ]; do sleep 2; done
+
+    log "error" "ADB has been restarted"
+    
+    adb kill-server 1> /dev/null 2> /dev/null
+    adb start-server 1> /dev/null 2> /dev/null
+    
+    adb reverse tcp:8090 tcp:8090 1> /dev/null 2> /dev/null
+}
+
+adb start-server 1> /dev/null
+
+log "success" "ADB Started"
+
+while [ true ]; do adb_watch ; done

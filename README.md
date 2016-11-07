@@ -14,3 +14,8 @@ chmod +x adb-service
 
 # important
 This script file has been developed on macOSX and not sure about compatibility on linux. test and contribution would be appreciated
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/mahanhaz/adb-auto-restarter/badge.svg?style=beer-square)](https://beerpay.io/mahanhaz/adb-auto-restarter)  [![Beerpay](https://beerpay.io/mahanhaz/adb-auto-restarter/make-wish.svg?style=flat-square)](https://beerpay.io/mahanhaz/adb-auto-restarter?focus=wish)

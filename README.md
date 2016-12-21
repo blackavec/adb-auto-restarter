@@ -31,4 +31,9 @@ adb -s <DEVICE_ID> reverse tcp:8081 tcp:8081
 Feel free to change the port number 8081 in case you are using any other ports on your packager
 
 # important
-This script file has been developed on macOSX and not sure about compatiblity on linux. test and contribution would be appreatiated
+This script file has been developed on macOSX and not sure about compatibility on linux. test and contribution would be appreciated
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/mahanhaz/adb-auto-restarter/badge.svg?style=beer-square)](https://beerpay.io/mahanhaz/adb-auto-restarter)  [![Beerpay](https://beerpay.io/mahanhaz/adb-auto-restarter/make-wish.svg?style=flat-square)](https://beerpay.io/mahanhaz/adb-auto-restarter?focus=wish)

@@ -1,3 +1,5 @@
+permission:
+	@chmod +x adb-service
+
 run:
-	chmod +x adb-service
-	bash -c "./adb-service"
+	@bash -c "./adb-service"

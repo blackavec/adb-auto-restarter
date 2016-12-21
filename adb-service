@@ -40,8 +40,8 @@ function adb_watch () {
     
     adb kill-server 1> /dev/null 2> /dev/null
     adb start-server 1> /dev/null 2> /dev/null
-    
-    adb reverse tcp:8090 tcp:8090 1> /dev/null 2> /dev/null
+
+    source ./custom-shell.sh
 }
 
 adb start-server 1> /dev/null
